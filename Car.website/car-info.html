@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Information</title>
+</head>
+<body>
+    <h1>Car Information</h1>
+    <label for="modelInput">Enter Car Model:</label>
+    <input type="text" id="modelInput">
+    <button id="fetchData">Fetch Car Info</button>
+    <div id="carInfo"></div>
+
+    <script>
+        document.getElementById("fetchData").addEventListener("click", function () {
+            const modelInput = document.getElementById("modelInput").value;
+
+            const url = "https://cars-by-api-ninjas.p.rapidapi.com/v1/cars";
+            const querystring = { model: modelInput };
+
+            const headers = {
+                "X-RapidAPI-Key": "a8491de794msh6676acc5521c4fcp1c5cf8jsn6d99a8656992",
+                "X-RapidAPI-Host": "cars-by-api-ninjas.p.rapidapi.com"
+            };
+
+            const params = new URLSearchParams(querystring);
+
+            fetch(url + "?" + params, { headers: headers })
+                .then(response => response.json())
+                .then(data => {
+                    // Handle the response data here
+                    const carInfo = document.getElementById("carInfo");
+                    carInfo.innerHTML = JSON.stringify(data, null, 2);
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                });
+        });
+    </script>
+</body>
+</html>

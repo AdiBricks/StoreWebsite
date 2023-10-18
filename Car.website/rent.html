@@ -11,40 +11,44 @@
 </head>
 
 <body>
-    <div class="video-container">
-        <video autoplay muted loop id="video-bg">
-            <source src="Car.website/carVideo.mp4" type="video/mp4">
-        </video>
-        <div class="content">
-            <header>
-                <h1>SUMMIT LUXURY AUTO</h1>
-                <nav>
-                    <ul>
-                        <li><a class="button-link clickable-link" href="http://127.0.0.1:5500/Car.website/index.html">Home</a></li>
-                        <li><a class="button-link clickable-link" href="http://127.0.0.1:5500/Car.website/vehicles.html">Vehicles</a></li>
-                        <li><a class="button-link" href="#">About</a></li>
-                        <li><a class="button-link" href="#">Contact</a></li>
-                    </ul>                    
-                </nav>
-            </header>
+    <h1>Car Rental Service</h1>
 
-        </div>
-    </div>
+    <form id="rental-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
 
-    <footer>
-        <p>&copy; 2023 Summit Luxury Auto</p>
-    </footer>
-    <div class="custom-cursor"></div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="car-type">Select Car Type:</label>
+        <select id="car-type" name="car-type" required>
+            <option value="sedan">Sedan</option>
+            <option value="suv">SUV</option>
+            <option value="truck">Truck</option>
+        </select><br>
+
+        <label for="rent-days">Rental Days:</label>
+        <input type="number" id="rent-days" name="rent-days" min="1" required><br>
+
+        <button type="submit">Rent Now</button>
+    </form>
+
     <script>
-        const cursor = document.querySelector('.custom-cursor');
+        document.getElementById("rental-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the form from submitting
 
-        document.addEventListener('mousemove', (e) => {
-            cursor.style.left = e.pageX + 'px';
-            cursor.style.top = e.pageY + 'px';
+            // Get form values
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var carType = document.getElementById("car-type").value;
+            var rentDays = document.getElementById("rent-days").value;
+
+            // Process the form data (you can send it to a server using AJAX here)
+
+            // Example: Showing an alert with the rental details
+            alert("Thank you, " + name + "! You have rented a " + carType + " for " + rentDays + " days. We will contact you at " + email + ".");
         });
-        
     </script>
-    <script src="script.js"></script>
 </body>
 
 </html>
