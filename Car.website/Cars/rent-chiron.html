@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+
+<body>
+    <div class="video-container">
+        <video autoplay muted loop id="video-bg">
+            <source src="carVideo.mp4" type="video/mp4">
+        </video>
+    <div class="content">
+    <header>
+        <h1>Summit Luxury Auto</h1>
+        <nav>
+            <ul>
+                <li><a class="button-link" href="http://127.0.0.1:5500/Car.website/index.html">HOME</a></li>
+                <li><a class="button-link" href="http://127.0.0.1:5500/Car.website/vehicles.html">VEHICLES</a></li>
+                <li><a class="button-link" target="_blank" rel="noopener" href="https://ths.li/CXry8ak">INSIGNIS GARAGE</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <script>
+        // Replace 'YOUR_API_KEY' with your actual API key
+        const apiKey = 'a8491de794msh6676acc5521c4fcp1c5cf8jsn6d99a8656992';
+        const endpoint = 'cars-by-api-ninjas.p.rapidapi.com/cars'; // Adjust the make parameter accordingly
+        const make = 'chiron'
+
+        const apiURL = 'cars-by-api-ninjas.p.rapidapi.com/cars?make=$chiron'
+      
+        fetch(apiUrl, {
+          headers: {
+            'X-RapidAPI-Key': apiKey
+          }
+        })
+          .then(response => response.json())
+          .then(data => {
+            // Handle the API response here
+            console.log(data); // You can update this to display the car information on your page
+          })
+          .catch(error => {
+            console.error('Error:', error);
+          });
+      </script>
+      

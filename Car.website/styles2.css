@@ -48,7 +48,7 @@ something {
 .button-link {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #95c5ed; /* Green background color */
+    background-color: #3a88c7; /* Green background color */
     color: white;
     text-align: center;
     text-decoration: none;
@@ -58,7 +58,7 @@ something {
 }
 
 .button-link:hover {
-    background-color: #a6c1e2; /* Darker green on hover */
+    background-color: #002149; /* Darker green on hover */
 }
 
 header {
