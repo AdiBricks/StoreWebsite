@@ -25,19 +25,19 @@ header {
 
 @keyframes changeBackground {
     0% {
-        background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Bugatti_Chiron_%2836559710091%29.jpg/2560px-Bugatti_Chiron_%2836559710091%29.jpg");
+        background: url(images/600LT_Coupe_Track_Front_Drift_Image-3_crop-16x9.jpg);
     }
     25% {
-        background: url("https://www.rolls-roycemotorcars.com/content/dam/rrmc/marketUK/rollsroycemotorcars_com/3-1-cullinan/page-properties/rolls-royce-cullinan-discover-hero-d.jpg");
+        background: url(images/2023-tesla-model-x-101-1671475309.jpeg);
     }
     50% {
-        background: url("https://car-images.bauersecure.com/wp-images/12905/01-teslamodelx.jpg");
+        background: url(images/652761-scaled.jpg);
     }
     75% {
-        background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/McLaren_P1.jpg/1200px-McLaren_P1.jpg");
+        background: url(images/rolls-royce-cullinan-discover-hero-d.jpg);
     }
     100% {
-        background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Bugatti_Chiron_%2836559710091%29.jpg/2560px-Bugatti_Chiron_%2836559710091%29.jpg");
+        background: url(images/chiron.jpg);
     }
     /* 100% {
         background: url("/images/carVideo.mp4");
@@ -53,8 +53,8 @@ something {
 .button-link {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #95c5ed; /* Green background color */
-    color: white;
+    background-color: #121314; /* Green background color */
+    color: rgb(12, 10, 10);
     text-align: center;
     text-decoration: none;
     font-size: 16px;
@@ -73,15 +73,50 @@ header {
     font-size: 24px;
 }
 
+nav {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    width: 100%; /* Make the nav bar span the full width */
+    z-index: 999; /* Ensure the nav bar appears above other elements */
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    z-index: 999;
+}
+
 nav ul {
     list-style: none;
+    padding: 0;
+    text-align: center;
 }
 
 nav ul li {
     display: inline;
-    margin-right: 20px;
+    margin: 0 20px;
     font-size: 18px;
 }
+
+/* Style for navigation links */
+nav ul li a {
+    color: white; /* Text color for the links */
+    text-decoration: none;
+}
+
+/* Change link color on hover */
+nav ul li a:hover {
+    color: #a6c1e2; /* Lighter color on hover */
+}
+
+
 
 .car-list {
     display: flex;
