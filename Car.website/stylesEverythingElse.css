@@ -78,15 +78,18 @@ nav ul li {
     font-size: 18px;
 }
 
-.car-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
+.car-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates two equal-width columns */
+    gap: 20px; /* Add space between cars */
+    width: 1600px; /* Adjust the value as needed */
+    margin: 0 auto; /* Center-align the container */
+    margin-top: 3%;
 }
 
 .car {
-    margin-left: 20px;
+    flex: 0 1 calc(50% - 10px); /* Set the width of each car to 50% minus the margin */
+    margin-bottom: 20px; /* Add space between rows */
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -95,15 +98,12 @@ nav ul li {
     transition: all 0.3s ease;
 }
 
-/* .carRight {
-    margin-right: 60%;
-    padding: 20px;
-    border: 1px solid #ddd;
+.image {
+    width: 400px;
+    height: 250px;
     border-radius: 10px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-} */
+
+}
 
 .car:hover {
     transform: translateY(-5px);
