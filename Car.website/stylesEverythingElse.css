@@ -151,7 +151,7 @@ nav ul li {
     height: 40px;
     border-width: 3px;
 }
-/*------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------Below this is the search bar stuff----------------------------------------------------*/
 .search-container {
     display: flex;
     align-items: center;
@@ -184,7 +184,7 @@ input[type="text"] {
     background-color: #002149; /* Darker green on hover */
 }
 
-/*-------------------------------------------------------------------------------------------------------------------*/
+/*------------------------Below this is the stuff for the attributes and tooltips-------------------------------------------------------------*/
 .car-attributes {
     position: absolute;
     top: 5px;
