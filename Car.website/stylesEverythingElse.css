@@ -81,10 +81,6 @@ nav ul li {
     width: 1400px; /* Adjust the value as needed */
     margin: 0 auto; /* Center-align the container */
     margin-top: 1%;
-    width: 35%; /* Adjust the value as needed */
-    margin: 0 auto; /* Center-align the container */
-    margin-top: 3%;
-    justify-content: center; /* Center the columns */
 }
 
 
@@ -92,8 +88,6 @@ nav ul li {
     flex: 0 1 calc(50% - 10px); /* Set the width of each car to 50% minus the margin */
     margin-bottom: 1%; /* Add space between rows */
     padding: 10px;
-    margin-bottom: 20px; /* Add space between rows */
-    padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px;
     background-color: #ffffff;
