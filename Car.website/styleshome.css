@@ -25,23 +25,21 @@ header {
 
 @keyframes changeBackground {
     0% {
-        background: url(images/600LT_Coupe_Track_Front_Drift_Image-3_crop-16x9.jpg);
+        background: url(images/stylehomecssimages/600LT_Coupe_Track_Front_Drift_Image-3_crop-16x9.jpg);
     }
     25% {
-        background: url(images/2023-tesla-model-x-101-1671475309.jpeg);
+        background: url(images/stylehomecssimages/2023-tesla-model-x-101-1671475309.jpeg);
     }
     50% {
-        background: url(images/652761-scaled.jpg);
+        background: url(images/stylehomecssimages/652761-scaled.jpg);
     }
     75% {
-        background: url(images/rolls-royce-cullinan-discover-hero-d.jpg);
+        background: url(/images/carVideo.mp4);
     }
     100% {
-        background: url(images/chiron.jpg);
+        background: url(images/stylehomecssimages/rolls-royce-cullinan-discover-hero-d.jpg;
     }
-    /* 100% {
-        background: url("/images/carVideo.mp4");
-    } */
+   
 }
 something {
     font-family: 'Inter', sans-serif;
