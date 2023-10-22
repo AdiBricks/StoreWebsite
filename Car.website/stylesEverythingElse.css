@@ -3,7 +3,7 @@ body {
     font-weight: 0;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #fce5e5;
     background-size: cover;
     background-position: center;
 }
@@ -78,20 +78,21 @@ nav ul li {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Creates two equal-width columns */
     gap: 20px; /* Add space between cars */
-    width: 1600px; /* Adjust the value as needed */
+    width: 1400px; /* Adjust the value as needed */
     margin: 0 auto; /* Center-align the container */
-    margin-top: 3%;
+    margin-top: 1%;
 }
 
 .car {
     flex: 0 1 calc(50% - 10px); /* Set the width of each car to 50% minus the margin */
-    margin-bottom: 20px; /* Add space between rows */
-    padding: 20px;
+    margin-bottom: 1%; /* Add space between rows */
+    padding: 10px;
     border: 1px solid #ddd;
     border-radius: 10px;
     background-color: #ffffff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    margin: 10px;
 }
 
 .image {
@@ -186,9 +187,9 @@ input[type="text"] {
 
 /*------------------------Below this is the stuff for the attributes and tooltips-------------------------------------------------------------*/
 .car-attributes {
-    position: absolute;
+    position: relative;
     top: 5px;
-    left: 5;
+    left: -40%;
 }
 
 /* Style for individual attribute tags */

@@ -13,49 +13,42 @@
         <header>
             <nav>
                 <ul>
-                    <li><a class="button-link" href="http://127.0.0.1:5500/Car.website/index.html">HOME</a></li>
-                    <li><a class="button-link" href="http://127.0.0.1:5500/Car.website/vehicles.html">VEHICLES</a></li>
-                    <li><a class="button-link" target="_blank" rel="noopener" href="https://ths.li/CXry8ak">INSIGNIS GARAGE</a></li>
-
+                    <li><a class="button-link1" href="http://127.0.0.1:5500/Car.website/index.html">HOME</a></li>
+                    <li><a class="button-link1" target="_blank" rel="noopener" href="https://ths.li/CXry8ak">INSIGNIS GARAGE</a></li>
+                    <li><a class="button-link1" href="http://127.0.0.1:5500/Car.website/about.html">ABOUT</a></li>
+                    <li><a class="button-link1" href="http://127.0.0.1:5500/Car.website/contact.html">CONTACT</a></li>
                 </ul>
             </nav>
         </header>
 </body>
 
 <script>
-    function searchCars() {
-        var input, filter, carContainers, car, carName, i, txtValue;
-        input = document.getElementById("search");
-        filter = input.value.toUpperCase();
-        carContainers = document.querySelectorAll('.car-container');
+function searchCars() {
+    var input, filter, carContainers, car, carName, i, txtValue;
+    input = document.getElementById("search");
+    filter = input.value.toUpperCase();
+    carContainers = document.querySelectorAll('.car-container');
 
-        for (i = 0; i < carContainers.length; i++) {
-            car = carContainers[i];
-            carName = car.querySelector('h2');
+    for (i = 0; i < carContainers.length; i++) {
+        car = carContainers[i].querySelectorAll('.car'); // Find cars within each container
+        for (var j = 0; j < car.length; j++) {
+            carName = car[j].querySelector('h2');
             txtValue = carName.textContent || carName.innerText;
 
             if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                car.style.display = "block"; // Show the car listing
+                car[j].style.display = "block"; // Show the car listing
             } else {
-                car.style.display = "none"; // Hide the car listing
+                car[j].style.display = "none"; // Hide the car listing
             }
         }
     }
-    document.getElementById("search").addEventListener("input", searchCars);
-
-    // // Add an event listener for Enter key press
-    // document.getElementById("search").addEventListener("input", searchCars);
-    // document.getElementById("search").addEventListener("keyup", function(event) {
-    //     if (event.key === "Enter") {
-    //         searchCars();
-    //     }
-    // });
+}
 </script>
 
 <body>
     <div class="search-container">
-        <input type="text" id="search" placeholder="Search for cars...">
-        <button class="search-button" onclick="searchCars()">Search</button>
+        <input type="text" id="search" placeholder=" Search for cars...">
+        <button class="search-button" onclick="searchCars()">Find Cars</button>
     </div>
 
     <div class="car-container">
@@ -70,10 +63,10 @@
             <p>$4000/day<p>
             <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</a>
         </div>
-    </div>
-
-    <div class="car-container">
         <div class="car"> <!--Tesla Roadster-->
+            <div class="car-attributes">
+                <span class="attribute-tag sedan" data-tooltip="This car is a sedan.">Sedan</span>
+            </div>
             <img class="image" src="/images/roadster.JPG" alt="Tesla Roadster" width="600" height="400">
             <h2>Tesla Roadster</h2>
             <p>Price: $400/hour</p>
@@ -90,10 +83,10 @@
             <p>$2000/day<p>
             <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</a>
         </div>
-    </div>
-        
-    <div class="car-container">
         <div class="car"> <!--Mercedes Benz G Class-->
+            <div class="car-attributes">
+                <span class="attribute-tag offroad" data-tooltip="This car is great for off roading">Off-Road</span>
+            </div>
             <img class="image" src="/images/benzGClass.jpg" alt="Mercedes Benz G" width="600" height="400">
             <h2>Mercedes Benz G Class</h2>
             <p>Price: $600/hour</p>
@@ -110,9 +103,6 @@
             <p>$4500/day</p>
             <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</a>
         </div>
-    </div>
-
-    <div class="car-container">
         <div class="car"> <!--Ferarri 488 GTB-->
             <img class="image" src="/images/Ferarri488GTB.png" alt="Ferrari 488 GTB" width="600" height="400">
             <h2>Ferrari 488 GTB</h2>
@@ -130,9 +120,6 @@
             <p>$4000/day</p>
             <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</a>
         </div>
-    </div>
-
-    <div class="car-container">
         <div class="car"> <!--Porche 911 Targa-->
             <img class="image" src="/images/porche911Taiga.JPG" alt="Porsche 911 Targa" width="600" height="400">
             <h2>Porsche 911 Targa</h2>
@@ -150,9 +137,6 @@
             <p>$5500/day</p>
             <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</a>
         </div>
-    </div>
-
-    <div class="car-container">
         <div class="car"> <!--Maserati Quattroporte-->
             <img class="image" src="/images/MaseratiQuattroporte.JPG" alt="Maserati Quattroporte" width="600" height="400">
             <h2>Maserati Quattroporte</h2>
@@ -170,9 +154,6 @@
             <p>$4000/day</p>
             <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</a>
         </div>
-    </div>
-
-    <div class="car-container">
         <div class="car"> <!--Mercedes Benz 300SL Gullwing-->
             <img class="image" src="/images/benz300SL-Gullwing.JPG" alt="1955 Mercedes-Benz 300SL Gullwing" width="600" height="400">
             <h2>1955 Mercedes-Benz 300SL Gullwing</h2>
@@ -190,9 +171,6 @@
             <p>$6000/day</p>
             <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</a>
         </div>
-    </div>
-
-    <div class="car-container">
         <div class="car"> <!--Bentley Flying Spur-->
             <img class="image" src="/images/bentleyFlyingSpur.JPG" alt="2022 Bentley Flying Spur" width="600" height="400">
             <h2>2022 Bentley Flying Spur</h2>
@@ -210,9 +188,6 @@
             <p>$4500/day</p>
             <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</a>
         </div>
-    </div>
-
-    <div class="car-container">
         <div class="car"> <!--BMW 7 Series-->
             <img class="image" src="/images/BMW7Series.JPG" alt="2022 BMW 7 Series" width="600" height="400">
             <h2>2022 BMW 7 Series</h2>
@@ -230,9 +205,6 @@
             <p>$2500/day</p>
             <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</a>
         </div>
-    </div>
-
-    <div class="car-container">
         <div class="car"> <!--Rivian R1T-->
             <div class="car-attributes">
                 <span class="attribute-tag offroad" data-tooltip="This car is great for off roading.">Off-Road</span>
