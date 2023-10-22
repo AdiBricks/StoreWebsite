@@ -13,9 +13,11 @@ body {
 header {
     background-color: #0a0a0a; /* Background color for the header */
     color: white;
+    background-color: #000; /* Background color for the header */
+    color: rgb(23, 6, 6);
     text-align: center;
     padding: 5px 0; /* Adjust top and bottom padding to reduce header height */
-    border-bottom: 1px solid #73e6fd; /* Border at the bottom with desired color and thickness */
+    border-bottom: 1px solid #081416; /* Border at the bottom with desired color and thickness */
     font-size: 16px; /* Adjust font size */
 }
 
@@ -52,7 +54,7 @@ something {
     display: inline-block;
     padding: 10px 20px;
     background-color: #121314; /* Green background color */
-    color: rgb(12, 10, 10);
+    color: rgb(11, 6, 6);
     text-align: center;
     text-decoration: none;
     font-size: 16px;
@@ -111,7 +113,7 @@ nav ul li a {
 
 /* Change link color on hover */
 nav ul li a:hover {
-    color: #a6c1e2; /* Lighter color on hover */
+    color: #14181c; /* Lighter color on hover */
 }
 
 
@@ -124,7 +126,8 @@ nav ul li a:hover {
 }
 
 .car {
-    margin: 20px;
+    flex-basis: 48%;
+    margin: 10px; /* Adjust margin as needed */
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px;

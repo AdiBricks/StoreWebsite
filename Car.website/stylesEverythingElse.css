@@ -76,17 +76,24 @@ nav ul li {
 
 .car-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Creates two equal-width columns */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Creates flexible columns with a minimum width of 200px */
     gap: 20px; /* Add space between cars */
     width: 1400px; /* Adjust the value as needed */
     margin: 0 auto; /* Center-align the container */
     margin-top: 1%;
+    width: 35%; /* Adjust the value as needed */
+    margin: 0 auto; /* Center-align the container */
+    margin-top: 3%;
+    justify-content: center; /* Center the columns */
 }
+
 
 .car {
     flex: 0 1 calc(50% - 10px); /* Set the width of each car to 50% minus the margin */
     margin-bottom: 1%; /* Add space between rows */
     padding: 10px;
+    margin-bottom: 20px; /* Add space between rows */
+    padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px;
     background-color: #ffffff;
@@ -94,6 +101,7 @@ nav ul li {
     transition: all 0.3s ease;
     margin: 10px;
 }
+
 
 .image {
     width: 400px;
@@ -244,4 +252,30 @@ input[type="text"] {
     opacity: 1;
     visibility: visible;
 }
+
+/* Styles for the arrow buttons */
+.arrow-btn {
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ddd;
+    padding: 10px 15px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.arrow-btn:hover {
+    background-color: #ccc;
+}
+
+.left-arrow {
+    left: 400px;
+}
+
+.right-arrow {
+    right: 400px;
+}
+
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
