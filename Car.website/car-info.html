@@ -8,47 +8,64 @@
     <label for="modelInput">Enter Car Model:</label>
     <input type="text" id="modelInput">
     <button id="fetchData">Fetch Car Info</button>
-    <div id="carInfo"></div>
-
-<body>
-    <div class="content">
-        <header>
-            <nav>
-                <ul>
-                    <li><a class="button-link" href="http://127.0.0.1:5500/Car.website/index.html">HOME</a></li>
-                    <li><a class="button-link" href="http://127.0.0.1:5500/Car.website/vehicles.html">VEHICLES</a></li>
-                    <li><a class="button-link" target="_blank" rel="noopener" href="https://ths.li/CXry8ak">INSIGNIS GARAGE</a></li>
-
-                </ul>
-            </nav>
-        </header>
+    <div id="carTable"></div>
 </body>
 
-    <script>
-        document.getElementById("fetchData").addEventListener("click", function () {
-            const modelInput = document.getElementById("modelInput").value;
+<script>
+    document.getElementById("fetchData").addEventListener("click", function () {
+        const modelInput = document.getElementById("modelInput").value;
 
-            const url = "https://cars-by-api-ninjas.p.rapidapi.com/v1/cars";
-            const querystring = { model: modelInput };
+        const url = "https://cars-by-api-ninjas.p.rapidapi.com/v1/cars";
+        const querystring = { model: modelInput };
 
-            const headers = {
-                "X-RapidAPI-Key": "a8491de794msh6676acc5521c4fcp1c5cf8jsn6d99a8656992",
-                "X-RapidAPI-Host": "cars-by-api-ninjas.p.rapidapi.com"
-            };
+        const headers = {
+            "X-RapidAPI-Key": "a8491de794msh6676acc5521c4fcp1c5cf8jsn6d99a8656992",
+            "X-RapidAPI-Host": "cars-by-api-ninjas.p.rapidapi.com"
+        };
 
-            const params = new URLSearchParams(querystring);
+        const params = new URLSearchParams(querystring);
 
-            fetch(url + "?" + params, { headers: headers })
-                .then(response => response.json())
-                .then(data => {
-                    // Handle the response data here
-                    const carInfo = document.getElementById("carInfo");
-                    carInfo.innerHTML = JSON.stringify(data, null, 2);
-                })
-                .catch(error => {
-                    console.error("Error:", error);
-                });
-        });
-    </script>
-</body>
+        fetch(url + "?" + params, { headers: headers })
+            .then(response => response.json())
+            .then(data => {
+                // Handle the response data here
+                const carTable = document.getElementById("carTable");
+                carTable.innerHTML = ""; // Clear previous table
+
+                if (data.length === 0) {
+                    carTable.textContent = "No cars found.";
+                } else {
+                    // Create a table
+                    const table = document.createElement("table");
+                    table.border = "1";
+
+                    // Create table header
+                    const headerRow = document.createElement("tr");
+                    for (const key in data[0]) {
+                        const th = document.createElement("th");
+                        th.textContent = key;
+                        headerRow.appendChild(th);
+                    }
+                    table.appendChild(headerRow);
+
+                    // Add data rows to the table
+                    data.forEach(car => {
+                        const row = document.createElement("tr");
+                        for (const key in car) {
+                            const cell = document.createElement("td");
+                            cell.textContent = car[key];
+                            row.appendChild(cell);
+                        }
+                        table.appendChild(row);
+                    });
+
+                    carTable.appendChild(table);
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+            });
+    });
+</script>
 </html>
+
