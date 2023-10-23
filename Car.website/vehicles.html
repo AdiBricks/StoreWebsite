@@ -61,7 +61,7 @@ function searchCars() {
             <h2>Bugatti Chiron</h2>
             <p>Price: $1000/hour</p>
             <p>$4000/day<p>
-            <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</a>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html?carName=Bugatti%20Chiron&pricePerHour=1000&pricePerDay=4000">Rent Now</a>
         </div>
         <div class="car"> <!--Tesla Roadster-->
             <div class="car-attributes">
@@ -411,25 +411,6 @@ function searchCars() {
     </div>
 
     <div class="car-container">
-        <div class="car"> <!--Spinjitzu Car-->
-            <div class="car-attributes">
-                <span class="attribute-tag offroad" data-tooltip="Great for parallel parking, u-turns, and unaliving">Off-Road</span>
-            </div>
-            <img class="image" src="images/adiimageunfolderlater/SpinjitzuCar.jpeg" alt="Spinjitzu Car" width="600" height="400">
-            <h2>Spinjitzu Car</h2>
-            <p>Price per Hour: $XX</p>
-            <p>Price per Day: $XXX</p>
-            <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</a>
-        </div>
-        <div class="car"> <!--Porsche 718 Cayman-->
-            <img class="image" src="/images/Porsche718Cayman.jpg" alt="Porsche 718 Cayman" width="600" height="400">
-            <h2>Porsche 718 Cayman</h2>
-            <p>Price: $150/hour</p>
-            <p>$900/day</p>
-            <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent/Porsche718Cayman">Rent Now</a>
-        </div>
-    
-    <div class="car-container">
         <div class="car">
             <div class="car-attributes">
                 <span class="attribute-tag offroad" data-tooltip="Great for parallel parking, u-turns, and unaliving">Off-Road</span>
@@ -456,6 +437,29 @@ function searchCars() {
 <body>
     </section>
     <script>
+        function logCarDetailsFromURL() {
+            // Get car details from the URL query parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const carName = urlParams.get('carName');
+            const pricePerHour = urlParams.get('pricePerHour');
+            const pricePerDay = urlParams.get('pricePerDay');
+        
+            // Update the header with car details
+            const header = document.querySelector('h1');
+            header.textContent = `Renting: ${carName}`;
+            
+            // Log car details to the console for demonstration purposes
+            console.log(`Renting ${carName}:\nPrice per hour: $${pricePerHour}\nPrice per day: $${pricePerDay}`);
+        }
+        
+        // Call the function when the page loads
+        window.onload = logCarDetailsFromURL;
+        
+        // Rest of your code for the rental form and handling form submission
+        document.getElementById("rental-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+            // Get form values and process the form data here
+        });
         // Get all the rent buttons
         const rentButtons = document.querySelectorAll('.rent-button');
 

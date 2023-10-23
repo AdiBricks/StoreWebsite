@@ -25,6 +25,34 @@
 
 <body>
     <h1>Car Rental Service</h1>
+    <script>
+        // Function to extract query parameters from the URL
+        function getQueryParams() {
+            const params = new URLSearchParams(window.location.search);
+            const carName = params.get('carName');
+            const pricePerHour = params.get('pricePerHour');
+            const pricePerDay = params.get('pricePerDay');
+
+            // Use the parameters as needed
+            console.log(`Car Name: ${carName}`);
+            console.log(`Price Per Hour: $${pricePerHour}`);
+            console.log(`Price Per Day: $${pricePerDay}`);
+
+            // You can also update HTML elements with these values
+            document.getElementById('car-name').textContent = `Car: ${carName}`;
+            document.getElementById('price-hour').textContent = `Price Per Hour: $${pricePerHour}`;
+            document.getElementById('price-day').textContent = `Price Per Day: $${pricePerDay}`;
+        }
+
+        // Call the function when the page loads
+        window.onload = getQueryParams;
+    </script>
+
+    <div>
+        <p id="car-name"></p>
+        <p id="price-hour"></p>
+        <p id="price-day"></p>
+    </div>
 
     <form id="rental-form">
         <label for="name">Name:</label>
@@ -33,11 +61,18 @@
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required><br>
 
-        <label for="car-type">Select Car Type:</label>
+        <label for="package-type">Select Package Type:</label>
+        <select id="package-type" name="car-type" required>
+            <option value="Luxury Package">Luxury</option>
+            <option value="Premier Package">Premier</option>
+            <option value="Ultimate VIP Service Package">Ultimate</option>
+        </select><br>
+
+        <label for="car-type">Select Vehicle:</label>
         <select id="car-type" name="car-type" required>
-            <option value="sedan">Sedan</option>
-            <option value="suv">SUV</option>
-            <option value="truck">Truck</option>
+            <option value="Bugatti Chiron">Bugatti Chiron</option>
+            <option value="Tesla Roadster">Tesla Roadster</option>
+            <option value="Mercedes Benz G-Class">Mercedes Benz G-Class</option>
         </select><br>
 
         <label for="rent-days">Rental Days:</label>
@@ -47,19 +82,20 @@
     </form>
 
     <script>
+        
         document.getElementById("rental-form").addEventListener("submit", function(event) {
             event.preventDefault(); // Prevent the form from submitting
 
             // Get form values
             var name = document.getElementById("name").value;
             var email = document.getElementById("email").value;
-            var carType = document.getElementById("car-type").value;
+            var packageType = document.getElementById("package-type").value;
             var rentDays = document.getElementById("rent-days").value;
-
+            var carType = document.getElementById("car-type").value;
             // Process the form data (you can send it to a server using AJAX here)
 
             // Example: Showing an alert with the rental details
-            alert("Thank you, " + name + "! You have rented a " + carType + " for " + rentDays + " days. We will contact you at " + email + ".");
+            alert("Thank you, " + name + "! You have reseved a " + carType + " under the " + packageType + " for " + rentDays + " days. We will contact you at " + email + ".");
         });
     </script>
 </body>
