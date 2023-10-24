@@ -1,24 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car Rental</title>
-    <link rel="stylesheet" href="stylesEverythingElse.css">
-    <link rel="stylesheet" href="styleshome.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Include your main stylesheet here -->
+    <link rel="stylesheet" href="styleshome.css"> <!-- Include page-specific stylesheet if needed -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif; /* font */
+            background-color: #f0f0f0; /* backgnd color */
+        }
+        .content {
+            text-align: center; /* align to center */
+            padding: 20px;
+        }
+        header {
+            background-color: #000; /* header color */
+            color: white;
+            padding: 30px; /* header size */
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0; /* Remove margin for the ul */
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        a.button-link1 {
+            text-decoration: none;
+            padding: 10px 20px;
+            color: white;
+            border-radius: 5px; /* Rounded corners */
+            background: linear-gradient(90deg, #3e0be7, #648bd4, #e5c33a, #d5ff01); /* color changing per hover */
+            background-size: 400% 100%;
+            transition: all 0.5s;
+        }
+        a.button-link1:hover {
+            background-position: 100%;
+        }
+    </style>
 </head>
-
 <body>
     <div class="content">
         <header>
+            <h1 class="title">SUMMIT LUXURY AUTO</h1>
             <nav>
                 <ul>
-                    <li><a class="button-link1" href="http://127.0.0.1:5500/Car.website/index.html">HOME</a></li>
-                    <li><a class="button-link1" href="http://127.0.0.1:5500/Car.website/vehicles.html">VEHICLES</a></li>
+                    <li><a class="button-link1" href="index.html">HOME</a></li>
+                    <li><a class="button-link1" href="vehicles.html">VEHICLES</a></li>
                     <li><a class="button-link1" target="_blank" rel="noopener" href="https://ths.li/CXry8ak">INSIGNIS GARAGE</a></li>
-                    <li><a class="button-link1" href="http://127.0.0.1:5500/Car.website/contact.html">CONTACT</a></li>                
+                    <li><a class="button-link1" href="contact.html">CONTACT</a></li>
                 </ul>
             </nav>
         </header>
+    </div>
 </body>
+</html>
