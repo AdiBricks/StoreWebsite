@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .price {
+            color: #ff6600;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Rental Information</h1>
+    </header>
+    <div class="container">
+        <h1 id="car-name">Car Name</h1>
+        <img id="car-image" src="" alt="Car Image" width="300" height="200">
+        <p>Price per hour: $<span class="price" id="price-hour">0</span></p>
+        <p>Price per day: $<span class="price" id="price-day">0</span></p>
+
+        <label for="email">Enter your email:</label>
+        <input type="email" id="email" required>
+
+        <label for="rent-duration">Choose Rental Duration:</label>
+        <select id="rent-duration">
+            <option value="hour">Rent for an Hour</option>
+            <option value="day">Rent for a Day</option>
+        </select>
+
+        <button id="store-email">Send Confirmation Email</button>
+    </div>
+    <script>
+        function displayRentalInfo() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const carName = urlParams.get('carName');
+            const pricePerHour = urlParams.get('pricePerHour');
+            const pricePerDay = urlParams.get('pricePerDay');
+            const imageUrl = urlParams.get('imageUrl');
+            
+            document.getElementById('car-name').textContent = carName;
+            document.getElementById('price-hour').textContent = pricePerHour;
+            document.getElementById('price-day').textContent = pricePerDay;
+            document.getElementById('car-image').src = imageUrl;
+        }
+
+        function storeEmail() {
+            const email = document.getElementById('email').value;
+            localStorage.setItem('userEmail', email);
+            alert(`Email ${email} has been stored.`);
+        }
+
+        window.onload = displayRentalInfo;
+        document.getElementById('store-email').addEventListener('click', storeEmail);
+    </script>
+</body>
+</html>
