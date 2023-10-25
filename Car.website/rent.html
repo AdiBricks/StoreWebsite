@@ -50,6 +50,10 @@
     </script>
 
     <div>
+        <h1 id="car-name">Car Name</h1>
+        <img id="car-image" src="" alt="Car Image" width="300" height="200">
+        <p>Price per hour: $<span class="price" id="price-hour">0</span></p>
+        <p>Price per day: $<span class="price" id="price-day">0</span></p>
         <p id="car-name"></p>
         <p id="price-hour"></p>
         <p id="price-day"></p>
@@ -83,6 +87,20 @@
     </form>
 
     <script>
+        function displayRentalInfo() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const carName = urlParams.get('carName');
+            const pricePerHour = urlParams.get('pricePerHour');
+            const pricePerDay = urlParams.get('pricePerDay');
+            const imageUrl = urlParams.get('imageUrl');
+            
+            document.getElementById('car-name').textContent = carName;
+            document.getElementById('price-hour').textContent = pricePerHour;
+            document.getElementById('price-day').textContent = pricePerDay;
+            document.getElementById('car-image').src = imageUrl;
+        }
+
+        window.onload = displayRentalInfo;
         document.getElementById("rental-form").addEventListener("submit", function(event) {
             event.preventDefault(); // Prevent the form from submitting
         
