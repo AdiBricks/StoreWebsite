@@ -107,8 +107,13 @@ nav ul li {
 
 /* Style for navigation links */
 nav ul li a {
-    color: white; /* Text color for the links */
     text-decoration: none;
+            padding: 10px 20px;
+            color: white;
+            border-radius: 5px; /* Rounded corners */
+            background: linear-gradient(90deg, #3e0be7, #648bd4, #e5c33a, #d5ff01); /* color changing per hover */
+            background-size: 400% 100%;
+            transition: all 0.5s;
 }
 
 /* Change link color on hover */
@@ -172,7 +177,7 @@ nav ul li a:hover {
 .custom-cursor {
     width: 20px;
     height: 20px;
-    border: 2px solid #fcc684;
+    border: 2px solid #FFBF69;
     border-radius: 50%;
     position: absolute;
     transform: translate(-50%, -50%);

@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <input type="hidden" id="user-email" name="user-email">
     <title>Car Rental</title>
     <link rel="stylesheet" href="stylesEverythingElse.css">
     <link rel="stylesheet" href="styleshome.css">
@@ -82,20 +83,26 @@
     </form>
 
     <script>
-        
         document.getElementById("rental-form").addEventListener("submit", function(event) {
             event.preventDefault(); // Prevent the form from submitting
-
+        
             // Get form values
             var name = document.getElementById("name").value;
             var email = document.getElementById("email").value;
             var packageType = document.getElementById("package-type").value;
             var rentDays = document.getElementById("rent-days").value;
             var carType = document.getElementById("car-type").value;
+        
+            // Set the user's email address in the hidden input field
+            document.getElementById("user-email").value = email;
+        
             // Process the form data (you can send it to a server using AJAX here)
-
+        
             // Example: Showing an alert with the rental details
-            alert("Thank you, " + name + "! You have reseved a " + carType + " under the " + packageType + " for " + rentDays + " days. We will contact you at " + email + ".");
+            alert("Thank you, " + name + "! You have reserved a " + carType + " under the " + packageType + " for " + rentDays + " days. We will contact you at " + email + ".");
+        
+            // Now, submit the form
+            document.getElementById("rental-form").submit();
         });
     </script>
 </body>

@@ -1,4 +1,5 @@
 # Flask-Server-Front-End
+<<<<<<< Updated upstream
 # Car Rental Service
 
 Welcome to our Car Rental Service. An efficient platform crafted to connect users with their desired rental cars seamlessly.
@@ -20,3 +21,6 @@ Welcome to our Car Rental Service. An efficient platform crafted to connect user
 ## Getting Started
 
 To be a part of our community, simply sign up on our homepage. From there, you can either list your car for rental or start browsing available vehicles.
+=======
+Welcome to Summit Luxury Rentals! You can rent all types of dream cars, going from the Bugatti, to a Tesla Roadster, to a Lamborghini! Check out our sweet rides, that come with reasonable and low prices! Hope you enjoy your time with out products!
+>>>>>>> Stashed changes
