@@ -4,10 +4,12 @@
     <title>Car Information</title>
 </head>
 <body>
-    <h1>Car Information</h1>
+    <h1>Available Inventory Information</h1>
+    <h2>Here are the details for your car!</h2>
     <label for="modelInput">Enter Car Model:</label>
     <input type="text" id="modelInput">
     <button id="fetchData">Fetch Car Info</button>
+    <button id="searchCar">Search Car</button>
     <div id="carTable"></div>
 </body>
 
@@ -53,7 +55,48 @@
             });
     });
     
-    
+    document.getElementById("searchCar").addEventListener("click", function () {
+        const modelInput = document.getElementById("modelInput").value.toLowerCase();
+        const rows = document.querySelectorAll("#carTable table tr");
+
+        let carFound = false;
+        rows.forEach(row => {
+            const modelCell = row.querySelector("td:nth-child(2)"); // Assuming model is the second column
+            if (modelCell && modelCell.textContent.toLowerCase() === modelInput) {
+                row.style.backgroundColor = "yellow"; // Highlight the row
+                carFound = true;
+            } else {
+                row.remove(); // Remove rows that do not match the searched car model
+            }
+        });
+
+        if (!carFound) {
+            alert("Car not found.");
+        }
+    });
+    function getQueryParams() {
+        const params = new URLSearchParams(window.location.search);
+        const carName = params.get('carName');
+
+        // Use the parameters as needed
+        console.log(`Car Name: ${carName}`);
+
+        // You can also update HTML elements with these values
+        document.getElementById('car-name').textContent = `Car: ${carName}`;
+    }
+    // Call the function when the page loads
+</script>
+<script>
+    document.getElementById("fetchData").click();
+    // Get the carName parameter from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const carName = urlParams.get('carName');
+    // Pre-fill the input field with the carName parameter
+    document.getElementById("modelInput").value = carName;
+
+    // Call the search function programmatically
+
+    document.getElementById("searchCar").click();
 </script>
 
 <!--<script>
