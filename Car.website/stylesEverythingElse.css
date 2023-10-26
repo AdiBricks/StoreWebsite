@@ -225,6 +225,20 @@ input[type="text"] {
     color: white
 }
 
+.fast {
+    background-color: rgb(211, 81, 102);
+    color: white
+}
+
+.budget{
+    background-color: green;
+    color: white
+}
+
+.luxury {
+    background-color:goldenrod;
+    color: white
+}
 /* Tooltip styles */
 .attribute-tag::after {
     content: attr(data-tooltip);
