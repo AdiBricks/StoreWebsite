@@ -12,7 +12,7 @@ Welcome to our Car Rental Service. An efficient platform crafted to connect user
 ## Team Members and Roles
 
 - **Tim**: Scrum Master & Frontend Developer
-- **Aditya**: Frontend & Backend Developer
+- **Aditya D**: Frontend & Backend Developer
 - **Aditya R**: Backend Developer
 - **Sai**: Frontend Developer
 - **Tanav**: DevOps Specialist
