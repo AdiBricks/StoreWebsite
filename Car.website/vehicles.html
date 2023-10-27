@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="stylesEverythingElse.css">
 </head>
 
-<body>
+<body> <!--viewchanging buttons-->
     <div class="button-container">
         <a href="http://127.0.0.1:5500/Car.website/vehiclesSlider.html">
             <button>
@@ -25,7 +25,7 @@
     </script>
 </body>
 
-<body>
+<body> <!--Header links-->
     <div class="content">
         <header>
             <nav>
@@ -39,7 +39,7 @@
         </header>
 </body>
 
-<script>
+<script> //Search Bar
 function searchCars() {
     var input, filter, carContainers, car, carName, i, txtValue;
     input = document.getElementById("search");
@@ -148,6 +148,9 @@ function searchCars() {
 
     <div class="car-container">
         <div class="car"> <!--Bentley Continental-->
+            <div class="car-attributes">
+                <span class="attribute-tag family" data-tooltip="This car is great for riding with your family">Family</span>
+            </div>
             <img class="image" src="/images/bentleyContinental.JPG" alt="Bentley Continental GT" width="600" height="400">
             <h2>Bentley Continental GT</h2>
             <p>Price: $800/hour</p>
@@ -156,6 +159,9 @@ function searchCars() {
             <a class="button-link" href="http://127.0.0.1:5500/Car.website/car-info.html?carName=Continental&20GT">Info</a>
         </div>
         <div class="car"> <!--Porche 911 Targa-->
+            <div class="car-attributes">
+                <span class="attribute-tag lowCG" data-tooltip="This car is very low to the ground with a low center of gravity">CG</span>
+            </div>
             <img class="image" src="/images/porche911Taiga.JPG" alt="Porsche 911 Targa" width="600" height="400">
             <h2>Porsche 911 Targa</h2>
             <p>Price: $750/hour</p>
@@ -243,6 +249,10 @@ function searchCars() {
     
     <div class="car-container">
         <div class="car"> <!--Lamborghini Huracán-->
+            <div class="car-attributes">
+                <span class="attribute-tag luxury" data-tooltip="This car has a very luxurious interior">Luxury</span>
+                <span class="attribute-tag lowCG" data-tooltip="This car is very low to the ground with a low center of gravity">CG</span> 
+            </div>
             <img class="image" src="/images/lamborghiniHuracan.JPG" alt="Lamborghini Huracán" width="600" height="400">
             <h2>2022 Lamborghini Huracán</h2>
             <p>Price: $1000/hour</p>
@@ -251,6 +261,9 @@ function searchCars() {
             <a class="button-link" href="http://127.0.0.1:5500/Car.website/car-info.html?carName=Huracan">Info</a>
         </div>
         <div class="car"> <!--Rivian R1S-->
+            <div class="car-attributes">
+                <span class="attribute-tag autopilot" data-tooltip="This car has self driving capabilities">Self-Driving</span>
+            </div>
             <img class="image" src="/images/R1S.JPG" alt="Rivian R1S" width="600" height="400">
             <h2>Rivian R1S</h2>
             <p>Price: $150/hour</p>

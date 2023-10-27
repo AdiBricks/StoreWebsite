@@ -239,6 +239,27 @@ input[type="text"] {
     background-color:goldenrod;
     color: white
 }
+
+.lowCG {
+    background-color: #002149;
+    color: white
+}
+
+.family {
+    background-color: cornflowerblue;
+    color: white
+}
+
+.autopilot {
+    background-color:silver;
+    color: white
+}
+
+.highmileage {
+    background-color: #000;
+    color: white
+}
+
 /* Tooltip styles */
 .attribute-tag::after {
     content: attr(data-tooltip);

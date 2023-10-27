@@ -75,8 +75,9 @@
         </div>
         <div id="prev-btn" class="arrow-btn left-arrow">&lt;</div>
     <!-- Car containers with images, details, and buttons -->
+
     <div class="car-container">
-        <div class="car">
+        <div class="car"> <!--Bugatti Chiron-->
             <div class="car-attributes">
                 <span class="attribute-tag sedan" data-tooltip="This car is a sedan.">Sedan</span>
                 <span class="attribute-tag city" data-tooltip="Great for city driving.">City</span>
@@ -85,77 +86,108 @@
             <h2>Bugatti Chiron</h2>
             <p>Price: $1000/hour</p>
             <p>$4000/day<p>
-            <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</a>
+            <a class="button-link" href="rent.html?carName=Bugatti%20Chiron&pricePerHour=1000&pricePerDay=4000">Rent Now</a>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/car-info.html?carName=Chiron">Info</a>
         </div>
     </div>
 
     <div class="car-container">
         <div class="car"> <!--Tesla Roadster-->
+            <div class="car-attributes">
+                <span class="attribute-tag sedan" data-tooltip="This car is a sedan.">Sedan</span>
+            </div>
             <img class="image" src="/images/roadster.JPG" alt="Tesla Roadster" width="600" height="400">
             <h2>Tesla Roadster</h2>
             <p>Price: $400/hour</p>
             <p>$2000/day<p>
-            <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</a>
+            <a class="button-link" href="rent.html?carName=Tesla%20Roadster&pricePerHour=400&pricePerDay=2000">Rent Now</a>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/car-info.html?carName=Roadster">Info</a>
         </div>
     </div>
 
     <div class="car-container">
         <div class="car"> <!--Rolls Royce Phantom-->
+            <div class="car-attributes">
+                <span class="attribute-tag luxury" data-tooltip="This car has a very luxurious interior">Luxury</span>
+            </div>
             <img class="image" src="/images/phantom.JPG" alt="Rolls Royce Phantom" width = "600" height="400">
             <h2>Rolls Royce phantom</h2>
             <p>Price: $600/hour</p>
             <p>$2000/day<p>
-            <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</a>
-        </div>
-    </div>
-    
-    <div class="car-container">
-        <div class="car"> <!--Aston Martin DB11-->
-            <img class="image" src="/images/AstonMartinDB11.jpg" alt="Aston Martin DB11" width="600" height="400">
-            <h2>Aston Martin DB11</h2>
-            <p>Price: $900/hour</p>
-            <p>$4500/day</p>
-            <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</a>
+            <a class="button-link" href="rent.html?carName=Rolls%20Royce%20Phantom&pricePerHour=600&pricePerDay=2000">Rent Now</a>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/car-info.html?carName=Phantom">Info</a>
         </div>
     </div>
 
     <div class="car-container">
         <div class="car"> <!--Mercedes Benz G Class-->
+            <div class="car-attributes">
+                <span class="attribute-tag offroad" data-tooltip="This car is great for off roading">Off-Road</span>
+            </div>
             <img class="image" src="/images/benzGClass.jpg" alt="Mercedes Benz G" width="600" height="400">
             <h2>Mercedes Benz G Class</h2>
             <p>Price: $600/hour</p>
             <p>$2000/day<p>
-            <button class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</button>
+            <a class="button-link" href="rent.html?carName=Mercedes%20Benz%20G%20Class&pricePerHour=600&pricePerDay=2000">Rent Now</a>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/car-info.html?carName=G%20Class">Info</a>
+        </div>
+    </div>
+
+    <div class="car-container">
+        <div class="car"> <!--Aston Martin DB11-->
+            <div class="car-attributes">
+                <span class="attribute-tag fast" data-tooltip="This car has a very high max speed">Fast</span>
+                <span class="attribute-tag budget" data-tooltip="This car is at an economical price">Budget</span>
+            </div>
+            <img class="image" src="/images/AstonMartinDB11.jpg" alt="Aston Martin DB11" width="600" height="400">
+            <h2>Aston Martin DB11</h2>
+            <p>Price: $900/hour</p>
+            <p>$4500/day</p>
+            <a class="button-link" href="rent.html?carName=Aston%20Martin%20DB11&pricePerHour=900&pricePerDay=4500">Rent Now</a>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/car-info.html?carName=DB11">Info</a>
         </div>
     </div>
 
     <div class="car-container">
         <div class="car"> <!--Ferarri 488 GTB-->
+            <div class="car-attributes">
+                <span class="attribute-tag fast" data-tooltip="This car has a very high max speed">Fast</span>
+                <span class="attribute-tag luxury" data-tooltip="This car has a very luxurious interior.">Luxury</span>
+            </div>
             <img class="image" src="/images/Ferarri488GTB.png" alt="Ferrari 488 GTB" width="600" height="400">
             <h2>Ferrari 488 GTB</h2>
             <p>Price: $1000/hour</p>
             <p>$5000/day</p>
-            <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</a>
+            <a class="button-link" href="rent.html?carName=Ferrari%20488%20GTB&pricePerHour=1000&pricePerDay=5000">Rent Now</a>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/car-info.html?carName=488GTB">Info</a>
         </div>
     </div>
 
     <div class="car-container">
         <div class="car"> <!--Bentley Continental-->
+            <div class="car-attributes">
+                <span class="attribute-tag family" data-tooltip="This car is great for riding with your family">Family</span>
+            </div>
             <img class="image" src="/images/bentleyContinental.JPG" alt="Bentley Continental GT" width="600" height="400">
             <h2>Bentley Continental GT</h2>
             <p>Price: $800/hour</p>
             <p>$4000/day</p>
-            <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</a>
+            <a class="button-link" href="rent.html?carName=Bentley%20Continental%20GT&pricePerHour=800&pricePerDay=4000">Rent Now</a>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/car-info.html?carName=Continental&20GT">Info</a>
         </div>
     </div>
 
     <div class="car-container">
         <div class="car"> <!--Porche 911 Targa-->
+            <div class="car-attributes">
+                <span class="attribute-tag lowCG" data-tooltip="This car is very low to the ground with a low center of gravity">CG</span>
+            </div>
             <img class="image" src="/images/porche911Taiga.JPG" alt="Porsche 911 Targa" width="600" height="400">
             <h2>Porsche 911 Targa</h2>
             <p>Price: $750/hour</p>
             <p>$3750/day</p>
-            <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</a>
+            <a class="button-link" href="rent.html?carName=Porsche%20911%20Targa&pricePerHour=750&pricePerDay=3750">Rent Now</a>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/car-info.html?carName=911%20Targa">Info</a>
         </div>
     </div>
 
@@ -165,7 +197,8 @@
             <h2>McLaren 720S</h2>
             <p>Price: $1100/hour</p>
             <p>$5500/day</p>
-            <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</a>
+            <a class="button-link" href="rent.html?carName=McLaren%20720S&pricePerHour=1100&pricePerDay=5500">Rent Now</a>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/car-info.html?carName=720%20S">Info</a>
         </div>
     </div>
 
@@ -175,7 +208,8 @@
             <h2>Maserati Quattroporte</h2>
             <p>Price: $600/hour</p>
             <p>$3000/day</p>
-            <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</a>
+            <a class="button-link" href="rent.html?carName=Maserati%20Quattroporte&pricePerHour=600&pricePerDay=3000">Rent Now</a>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/car-info.html?carName=Quattroporte">Info</a>
         </div>
     </div>
         
@@ -185,7 +219,8 @@
             <h2>Audi R8 Spyder</h2>
             <p>Price: $800/hour</p>
             <p>$4000/day</p>
-            <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</a>
+            <a class="button-link" href="rent.html?carName=Audi%20R8%20Spyder&pricePerHour=800&pricePerDay=4000">Rent Now</a>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/car-info.html?carName=R8%20Spyder">Info</a>
         </div>
     </div>
 
@@ -195,7 +230,8 @@
             <h2>1955 Mercedes-Benz 300SL Gullwing</h2>
             <p>Price: $800/hour</p>
             <p>$4000/day</p>
-            <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</a>
+            <a class="button-link" href="rent.html?carName=Mercedes%20Benz%20300SL%20Gullwing&pricePerHour=800&pricePerDay=4000">Rent Now</a>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/car-info.html?carName=300%20SL%20Gullwing">Info</a>
         </div>
     </div>
 
@@ -205,17 +241,61 @@
             <h2>1961 Ferrari 250 GT California</h2>
             <p>Price: $1200/hour</p>
             <p>$6000/day</p>
-            <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</a>
+            <a class="button-link" href="rent.html?carName=Ferrari%20250%20GT%20California&pricePerHour=1200&pricePerDay=6000">Rent Now</a>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/car-info.html?carName=250%20GT%20California">Info</a>
         </div>
-    </div>
-
-    <div class="car-container">
         <div class="car"> <!--Bentley Flying Spur-->
             <img class="image" src="/images/bentleyFlyingSpur.JPG" alt="2022 Bentley Flying Spur" width="600" height="400">
             <h2>2022 Bentley Flying Spur</h2>
             <p>Price: $1000/hour</p>
             <p>$5000/day</p>
+            <a class="button-link" href="rent.html?carName=Bentley%20Flying%20Spur&pricePerHour=1000&pricePerDay=5000">Rent Now</a>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/car-info.html?carName=Flying%20Spur">Info</a>
+        </div>
+    </div>
+
+    <div class="car-container">
+        <div class="car"> <!--Audi A8-->
+            <img class="image" src="/images/AudiA8.JPG" alt="Audi A8" width="600" height="400">
+            <h2>Audi A8</h2>
+            <p>Price: $800/hour</p>
+            <p>$4000/day</p>
             <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</a>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/car-info.html?carName=A8">Info</a>
+        </div>
+        <div class="car"> <!--Jaguar F-Type-->
+            <img class="image" src="/images/jaguarFType.JPG" alt="2022 Jaguar F-Type" width="600" height="400">
+            <h2>2022 Jaguar F-Type</h2>
+            <p>Price: $750/hour</p>
+            <p>$3750/day</p>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</a>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/car-info.html?carName=F-Type">Info</a>
+        </div>
+    </div>
+    
+    <div class="car-container">
+        <div class="car"> <!--Lamborghini Huracán-->
+            <div class="car-attributes">
+                <span class="attribute-tag luxury" data-tooltip="This car has a very luxurious interior">Luxury</span>
+                <span class="attribute-tag lowCG" data-tooltip="This car is very low to the ground with a low center of gravity">CG</span> 
+            </div>
+            <img class="image" src="/images/lamborghiniHuracan.JPG" alt="Lamborghini Huracán" width="600" height="400">
+            <h2>2022 Lamborghini Huracán</h2>
+            <p>Price: $1000/hour</p>
+            <p>$5000/day</p>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</a>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/car-info.html?carName=Huracan">Info</a>
+        </div>
+        <div class="car"> <!--Rivian R1S-->
+            <div class="car-attributes">
+                <span class="attribute-tag autopilot" data-tooltip="This car has self driving capabilities">Self-Driving</span>
+            </div>
+            <img class="image" src="/images/R1S.JPG" alt="Rivian R1S" width="600" height="400">
+            <h2>Rivian R1S</h2>
+            <p>Price: $150/hour</p>
+            <p>$400/day</p>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</a>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/car-info.html?carName=R1S">Info</a>
         </div>
     </div>
 
@@ -226,16 +306,15 @@
             <p>Price: $900/hour</p>
             <p>$4500/day</p>
             <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</a>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/car-info.html?carName=Maybach%20S%20Class">Info</a>
         </div>
-    </div>
-
-    <div class="car-container">
         <div class="car"> <!--BMW 7 Series-->
             <img class="image" src="/images/BMW7Series.JPG" alt="2022 BMW 7 Series" width="600" height="400">
             <h2>2022 BMW 7 Series</h2>
             <p>Price: $700/hour</p>
             <p>$3500/day</p>
             <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</a>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/car-info.html?carName=7%20Series">Info</a>
         </div>
     </div>
 
@@ -246,10 +325,8 @@
             <p>Price: $500/hour</p>
             <p>$2500/day</p>
             <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</a>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/car-info.html?carName=Lincoln%20Continental">Info</a>
         </div>
-    </div>
-
-    <div class="car-container">
         <div class="car"> <!--Rivian R1T-->
             <div class="car-attributes">
                 <span class="attribute-tag offroad" data-tooltip="This car is great for off roading.">Off-Road</span>
@@ -259,6 +336,177 @@
             <p>Price: $500/hour</p>
             <p>$2500/day</p>
             <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</a>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/car-info.html?carName=R1T">Info</a>
+        </div>
+    </div>
+
+    <div class="car-container">
+        <div class="car"> <!--Zenvo ST1-->
+            <img class="image" src="" alt="Zenvo ST1" width="600" height="400">
+            <h2>Zenvo ST1</h2>
+            <p>$50 per hour</p>
+            <p>$300 per day</p>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</a>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/car-info.html">Info</a>
+        </div>
+        <div class="car"> <!--Koenigsegg Ageira-->
+            <img class="image" src="" alt="Koenigsegg Ageira" width="600" height="400">
+            <h2>Koenigsegg Ageira</h2>
+            <p>$60 per hour</p>
+            <p>$350 per day</p>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</a>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/car-info.html">Info</a>
+        </div>
+    </div>
+    <div class="car-container">
+        <div class="car"> <!--Spyker Gunmetal Gray-->
+            <div class="car-attributes">
+                <span class="attribute-tag stylish" data-tooltip="Sleek and modern design">Stylish</span>
+            </div>
+            <img class="image" src="/images/adiimageunfolderlater/SpykerGunmetalGray.jpg" alt="Spyker Gunmetal Gray" width="600" height="400">
+            <h2>Spyker Gunmetal Gray</h2>
+            <p>$55 per hour</p>
+            <p>$320 per day</p>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</a>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/car-info.html">Info</a>
+        </div>
+        <div class="car"> <!--Yellow Saleen-->
+            <div class="car-attributes">
+                <span class="attribute-tag high-performance" data-tooltip="Powerful and fast">High-Performance</span>
+            </div>
+            <img class="image" src="/images/adiimageunfolderlater/SaleenYellow.jpg" alt="Mustang Saleen" width="600" height="400">
+            <h2>Mustang Saleen</h2>
+            <p>$45 per hour</p>
+            <p>$270 per day</p>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</a>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/car-info.html">Info</a>
+        </div>
+    </div>
+    
+    <div class="car-container">
+        <div class="car"> <!-- Porsche Black -->
+            <div class="car-attributes">
+                <span class="attribute-tag offroad" data-tooltip="Sporty Performance">Off-Road</span>
+            </div>
+            <img class="image" src="/images/adiimageunfolderlater/PorscheBlack.jpg" alt="Porsche Black" width="600" height="400">
+            <h2>Porsche Black</h2>
+            <p>Price per Hour: $150</p>
+            <p>Price per Day: $1,000</p>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</a>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/car-info.html">Info</a>
+        </div>
+        <div class="car"> <!-- Pagani Blue -->
+            <div class="car-attributes">
+                <span class="attribute-tag offroad" data-tooltip="Luxury Exotic">Off-Road</span>
+            </div>
+            <img class="image" src="/images/adiimageunfolderlater/PaganiBlue.jpgg" alt="Pagani Blue" width="600" height="400">
+            <h2>Pagani Blue</h2>
+            <p>Price per Hour: $200</p>
+            <p>Price per Day: $1,500</p>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</a>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/car-info.html">Info</a>
+        </div>
+    </div>
+
+    <div class="car-container">
+        <div class="car"> <!-- Red Noble -->
+            <div class="car-attributes">
+                <span class="attribute-tag offroad" data-tooltip="Great Speed">Off-Road</span>
+            </div>
+            <img class="image" src="/images/adiimageunfolderlater/NobleRed.jpg" alt="NobleRed" width="600" height="400">
+            <h2>NobleRed</h2>
+            <p>$50 per hour</p>
+            <p>$350 per day</p>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</a>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/car-info.html">Info</a>
+        </div>
+        <div class="car"> <!-- Red Lamborghini-->
+            <div class="car-attributes">
+                <span class="attribute-tag offroad" data-tooltip="Luxury Sports Car">Off-Road</span>
+            </div>
+            <img class="image" src="/images/adiimageunfolderlater/LamborghiniRed.jpg" alt="LamborghiniRed" width="600" height="400">
+            <h2>LamborghiniRed</h2>
+            <p>$75 per hour</p>
+            <p>$500 per day</p>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</a>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/car-info.html">Info</a>
+        </div>
+    </div>
+    <div class="car-container">
+        <div class="car"> <!--White Koenigsegg-->
+            <div class="car-attributes">
+                <span class="attribute-tag offroad" data-tooltip="High Speed Performance">Off-Road</span>
+            </div>
+            <img class="image" src="/images/adiimageunfolderlater/KoenigseggWhite.jpg" alt="Koenigsegg White" width="600" height="400">
+            <h2>White Koenigsegg</h2>
+            <p>$100 per hour</p>
+            <p>$800 per day</p>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</a>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/car-info.html">Info</a>
+        </div>
+        <div class="car"> <!--Yellow Henessy Performance Engineering-->
+            <div class="car-attributes">
+                <span class="attribute-tag offroad" data-tooltip="Superior Handling">Off-Road</span>
+            </div>
+            <img class="image" src="/images/adiimageunfolderlater/HenessyPreformanceEngineeringYellow.jpg" alt="Henessy Performance Engineering Yellow" width="600" height="400">
+            <h2>Yellow Henessy Performance Engineering </h2>
+            <p>$120 per hour</p>
+            <p>$900 per day</p>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</a>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/car-info.html">Info</a>
+        </div>
+    </div>
+    
+    <div class="car-container">
+        <div class="car"> <!--Red Ferrari-->
+            <div class="car-attributes">
+                <span class="attribute-tag offroad" data-tooltip="Not ideal for off-road driving">Off-Road</span>
+            </div>
+            <img class="image" src="/images/adiimageunfolderlater/Ferrari.jpg" alt="Ferrari" width="600" height="400">
+            <h2>Ferrari</h2>
+            <p>$100 per hour</p>
+            <p>$500 per day</p>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</a>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/car-info.html">Info</a>
+        </div>
+        <div class="car"> <!--Bugatti-->
+            <div class="car-attributes"> 
+                <span class="attribute-tag offroad" data-tooltip="Not suitable for off-road use">Off-Road</span>
+            </div>
+            <img class="image" src="/images/adiimageunfolderlater/Bugatti.jpg" alt="Bugatti" width="600" height="400">
+            <h2>Bugatti</h2>
+            <p>$150 per hour</p>
+            <p>$750 per day</p>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</a>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/car-info.html">Info</a>
+        </div>
+    </div>
+
+    <div class="car-container"> 
+        <div class="car"> <!--Aston Martin-->
+            <div class="car-attributes">
+                <span class="attribute-tag offroad" data-tooltip="Not intended for off-road driving">Off-Road</span>
+            </div>
+            <img class="image" src="/images/adiimageunfolderlater/AstonMartin.jpg" alt="Aston Martin" width="600" height="400">
+            <h2>Aston Martin</h2>
+            <p>$120 per hour</p>
+            <p>$600 per day</p>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</a>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/car-info.html">Info</a>
+        </div>
+    </div>
+
+    <div class="car-container">
+        <div class="car"> <!--Arinnera-->
+            <div class="car-attributes">
+                <span class="attribute-tag offroad" data-tooltip="Not recommended for off-road usage">Off-Road</span>
+            </div>
+            <img class="image" src="/images/adiimageunfolderlater/Arinnera.jpg" alt="Arinnera" width="600" height="400">
+            <h2>Arinnera</h2>
+            <p>$90 per hour</p>
+            <p>$450 per day</p>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/rent.html">Rent Now</a>
+            <a class="button-link" href="http://127.0.0.1:5500/Car.website/car-info.html">Info</a>
         </div>
     </div>
     <!-- Add more car containers as needed -->
