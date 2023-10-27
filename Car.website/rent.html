@@ -84,10 +84,31 @@
             const email = document.getElementById('email').value;
             localStorage.setItem('userEmail', email);
             alert(`Email ${email} has been stored.`);
+
+            const userEmail = email; // Replace with the actual email
+
+        const data = { email: email };
+
+        fetch('https://rapidprod-sendgrid-v1.p.rapidapi.com/alerts/%7Balert_id%7D', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Email sent successfully:', data);
+        })
+        .catch(error => {
+            console.error('Error sending email:', error);
+        });
+            
         }
 
         window.onload = displayRentalInfo;
         document.getElementById('store-email').addEventListener('click', storeEmail);
     </script>
+    
 </body>
 </html>

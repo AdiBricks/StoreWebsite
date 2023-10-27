@@ -312,3 +312,9 @@ input[type="text"] {
     bottom: 67%;
     left: 0.75%;
 }
+
+.home-button {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
