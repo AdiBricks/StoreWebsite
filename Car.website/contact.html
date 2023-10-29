@@ -8,16 +8,20 @@
     <link rel="stylesheet" href="styleshome.css">
     <style>
         body {
-            background-color: #FFFFFF;
+            background-image: url('background.jpg'); /* Replace 'background.jpg' with your actual image path */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
         .content {
-            background-color: #FFFFFF;
+            background-color: rgba(254, 255, 255, 0); /* Slightly transparent white */
+            padding: 20px; /* Adding some padding */
         }
         .contact-form {
             max-width: 600px;
             margin: 30px auto;
             padding: 20px;
-            background-color: #FFFFFF;
+            background-color: #F4F4F4;
             border: 1px solid #ddd;
             border-radius: 5px;
         }
@@ -55,9 +59,19 @@
             background-color: #45A049;
         }
         .contact-info {
-            background-color: #FFFFFF;
+            background-color: #333;
             padding: 20px;
-            margin: 30px 0;
+            color: #FFF;
+            text-align: center;
+        }
+        .contact-info h2,
+        .contact-info p {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .contact-info a {
+            color: #FFF;
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -66,10 +80,10 @@
         <header>
             <nav>
                 <ul>
-                    <li><a class="button-link1" href="index.html">HOME</a></li>
+                    <!-- <li><a class="button-link1" href="index.html">HOME</a></li>
                     <li><a class="button-link1" href="vehicles.html">VEHICLES</a></li>
                     <li><a class="button-link1" target="_blank" rel="noopener" href="https://ths.li/CXry8ak">INSIGNIS GARAGE</a></li>
-                    <li><a class="button-link1" href="contact.html">CONTACT</a></li>
+                    <li><a class="button-link1" href="contact.html">CONTACT</a></li> -->
                 </ul>
             </nav>
         </header>
@@ -85,11 +99,12 @@
                 <button type="submit">Send Message</button>
             </form>
         </div>
-    </div>
-    <!-- Contact Information -->
-    <div class="contact-info">
-        <h2>Contact Information</h2>
-        <p>If you have any questions, feel free to email us at <a href="mailto:timalfaraje@icloud.com">timalfaraje@icloud.com</a></p>
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p>If you have any questions, feel free to email us at <a href="mailto:timalfaraje@icloud.com">timalfaraje@icloud.com</a></p>
+        </div>
     </div>
 </body>
 </html>
+
