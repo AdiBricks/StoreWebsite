@@ -81,22 +81,34 @@
     document.getElementById("searchCar").addEventListener("click", function () {
         const modelInput = document.getElementById("modelInput").value.toLowerCase();
         const rows = document.querySelectorAll("#carTable table tr");
-
-        let carFound = false;
+    
+        const newTable = document.createElement("table");
+        newTable.border = "1";
+    
+        let headerRow; // Declare a variable to store the header row
+    
         rows.forEach(row => {
-            const modelCell = row.querySelector("td:nth-child(2)"); // Assuming model is the second column
-            if (modelCell && modelCell.textContent.toLowerCase() === modelInput) {
-                row.style.backgroundColor = "yellow"; // Highlight the row
-                carFound = true;
+            if (row.firstElementChild.tagName === "TH") {
+                // Store the header row
+                headerRow = row.cloneNode(true);
+                newTable.appendChild(headerRow); // Append the header row to the new table
             } else {
-                row.remove(); // Remove rows that do not match the searched car model
+                const modelCell = row.querySelector("td:nth-child(2)"); // Assuming model is the second column
+                if (modelCell && modelCell.textContent.toLowerCase() === modelInput) {
+                    const newRow = row.cloneNode(true); // Clone the matching row
+                    newRow.style.backgroundColor = "pink"; // Highlight the row
+                    newTable.appendChild(newRow); // Append the matching row to the new table
+                }
             }
         });
-
-        // if (!carFound) {
-        //     alert("Car not found.");
-        // }
+    
+        // Replace the old table with the new table
+        const carTable = document.getElementById("carTable");
+        carTable.innerHTML = "";
+        carTable.appendChild(newTable);
     });
+    
+    
     function getQueryParams() {
         const params = new URLSearchParams(window.location.search);
         const carName = params.get('carName');
