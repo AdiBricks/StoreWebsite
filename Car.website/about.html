@@ -4,41 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car Rental</title>
-   
     <style>
         body, html {
             height: 100%;
-            margin: 0; /* Reset default margin */
-            font-family: Arial, sans-serif; /* Set a fallback font family */
+            margin: 0;
+            font-family: Arial, sans-serif;
         }
-        
+
         /* Your CSS for the parallax effect goes here */
         .parallax {
-            /* The image used */
-            background-image: url(/images/img_parallax.jpg);
-        
-            /* Full height */
-            height: 100vh; 
-        
-            /* Create the parallax scrolling effect */
+            height: 100vh;
             background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
+            transition: background-image 0.5s;
         }
 
         /* Styling for the text boxes */
         .parallax-text-box {
-            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            background-color: rgba(255, 255, 255, 0.8);
             padding: 20px;
-            margin: 0 auto; /* Center the text box */
-            width: 60%; /* Adjust width as needed */
+            margin: 0 auto;
+            width: 60%;
             border-radius: 10px;
         }
 
         .parallax-text {
-            color: #000; /* Text color */
-            text-align: justify; /* Align text */
+            color: #000;
+            text-align: justify;
         }
 
         .parallax-images {
@@ -49,7 +43,7 @@
         }
 
         .parallax-images img {
-            width: 200px; /* Adjust image width */
+            width: 200px;
             height: auto;
             border-radius: 10px;
         }
@@ -63,63 +57,41 @@
     </style>
 </head>
 <body>
-
     <!-- Parallax Sections -->
-    <h2>Welcome to Luxury Summit Car Rental!</h2>
-    <p>Want to rent a car for reasonable prices! An efficient platform crafted to connect users with their desired rental cars seamlessly.</p>
-    
-    <div class="parallax">
+    <div class="parallax" id="section1" data-bg="/images/img_parallax.jpg">
         <div class="parallax-text-box">
             <div class="parallax-text">
                 In the vibrant city of San Diego, surrounded by towering structures of glass and steel, my journey began as I, Alex Turner, discovered my deep passion for luxury cars. It all started in a tiny garage where I indulged my love for restoring classic cars. My fascination with automobiles originated from my early days spent leafing through car magazines and attending family trips to car shows.
             </div>
         </div>
-        <div class="parallax-images">
-            <img src="/images/benz300SL-Gullwing.JPG" alt="Car 1">
-
-        </div>
     </div>
 
-    <div class="parallax">
+    <div class="parallax" id="section2" data-bg="/images/lamborghiniHuracan.JPG">
         <div class="parallax-text-box">
             <div class="parallax-text">
                 Summit Luxury Rentals, born from this passion, was more than just a business; it was my dream to make high-end cars accessible to everyone. We aimed to offer people the thrill of driving top-notch cars without the hassle of ownership. Our company gained fame for its top-of-the-line fleet, including sleek sports cars and elegant sedans. What truly set us apart wasn't just the quality of our cars, but the exceptional care we provided to each client, making their rental experience exceptional.
             </div>
         </div>
-        <div class="parallax-images">
-
-            <img src="/images/lamborghiniHuracan.JPG" alt="Car 2">
-
-        </div>
     </div>
 
-    <div class="parallax">
+    <div class="parallax" id="section3" data-bg="/images/LincolnContinental.JPG">
         <div class="parallax-text-box">
             <div class="parallax-text">
                 Each vehicle we offered was a masterpiece, meticulously maintained for a smooth and exquisite ride. Even as we expanded online, our services were sought after for various special events, from weddings to exclusive getaways.
             </div>
         </div>
-        <div class="parallax-images">
-            <img src="/images/LincolnContinental.JPG" alt="Car 4">
-            <img src="/images/mercedesMaybachSclass.JPG" alt="Car 5">
-            <img src="/images/roadster.JPG" alt="Car 6">
-        </div>
     </div>
 
-    <div class="parallax">
+    <div class="parallax" id="section4" data-bg="/images/ferarri250GT-California.JPG">
         <div class="parallax-text-box">
             <div class="parallax-text">
                 My commitment to sharing the thrill of luxury cars has remained at the core of Summit Luxury Rentals. It's not merely about renting a car but experiencing the power and grace of a Summit luxury vehicle. For me, Summit Luxury Rentals is more than a business; it's the realization of a dream. My passion has turned a simple garage hobby into a thriving enterprise, spreading luxury and excitement not just in Cascade Vista but far beyond.
             </div>
         </div>
-        <div class="parallax-images">
-            <img src="/images/ferarri250GT-California.JPG" alt="Car 3">
-        </div>
     </div>
 
     <!-- Additional content -->
     <div class="parallax"></div>
-    
     <div class="content">
         <header>
             <h1 class="title">SUMMIT LUXURY AUTO</h1>
@@ -133,10 +105,24 @@
             </nav>
         </header>
     </div>
-    
     <footer>
         <p>&copy; 2023 Summit Luxury Auto</p>
     </footer>
+    <script>
+        const sections = document.querySelectorAll('.parallax');
 
+        function changeBackground() {
+            sections.forEach((section) => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top <= window.innerHeight * 0.5 && rect.bottom >= window.innerHeight * 0.5) {
+                    const bg = section.getAttribute('data-bg');
+                    section.style.backgroundImage = `url(${bg})`;
+                }
+            });
+        }
+
+        document.addEventListener('scroll', changeBackground);
+    </script>
 </body>
 </html>
+
