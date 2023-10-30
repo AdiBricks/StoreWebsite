@@ -67,7 +67,7 @@
             font-size: 18px;
         }
     </style>
-    <script>
+    <script> //Tells php file to run
         function submitForm(event) {
             event.preventDefault();
             const formData = new FormData(event.target);
@@ -75,8 +75,8 @@
                 method: 'POST',
                 body: formData
             })
-            .then(response => response.text())
-            .then(data => {
+            .then(response => response.text()) //Tells html code to hide once request sent
+            .then(data => { //This next code appears
                 document.getElementById('responseMessage').innerHTML = data;
                 document.getElementById('contactForm').style.display = 'none';
                 document.getElementById('thankYouMessage').style.display = 'block';
