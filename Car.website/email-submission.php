@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (mail($recipient, $subject, $email_content, $email_headers)) {
         http_response_code(200);
-        echo "Thank You! Your message has been sent.";
+        echo ""; // No need to send a response as we are handling it on the front-end
     } else {
         http_response_code(500);
         echo "Oops! Something went wrong and we couldn't send your message.";
@@ -29,3 +29,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "There was a problem with your submission, please try again.";
 }
 ?>
+
