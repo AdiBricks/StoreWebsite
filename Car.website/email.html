@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Checkout Form</title>
+</head>
+<body>
+    <h1>Car Checkout Form</h1>
+    <form id="checkout-form">
+        <label for="user">Name:</label>
+        <input type="text" id="user" name="user" required>
+        <br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+
+<script>
+    document.getElementById("checkout-form").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const user = document.getElementById("user").value;
+        const email = document.getElementById("email").value;
+
+        // Define the data to send to your Flask API
+        const data = new URLSearchParams();
+        data.append('user', user);
+        data.append('email', email);
+
+        // Send a POST request to your Flask API
+        fetch("/submit", {
+            method: "POST",
+            body: data,
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            }
+        })
+        .then(response => response.text())
+        .then(responseText => {
+            alert(responseText); // Show the response from your Flask API
+        })
+        .catch(error => {
+            console.error("Error:", error);
+        });
+    });
+</script>
